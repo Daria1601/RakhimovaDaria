@@ -4,7 +4,7 @@ public class ZeroSteps3 {
     public int sum(int[] array) {
         int res = 0;
 
-        for (int num: array) {
+        for (int num : array) {
             res += num;
         }
 
@@ -14,7 +14,7 @@ public class ZeroSteps3 {
     public int mul(int[] array) {
         int res = 0;
 
-        for (int num: array) {
+        for (int num : array) {
             if (res == 0) {
                 res = num;
                 continue;
@@ -32,7 +32,7 @@ public class ZeroSteps3 {
 
         int min = array[0];
 
-        for (int num: array) {
+        for (int num : array) {
             if (min > num) {
                 min = num;
             }
@@ -48,7 +48,7 @@ public class ZeroSteps3 {
 
         int max = array[0];
 
-        for (int num: array) {
+        for (int num : array) {
             if (max < num) {
                 max = num;
             }
@@ -229,7 +229,6 @@ public class ZeroSteps3 {
 
     public boolean bothZeroAtPosition(int[] array1, int[] array2) {
         int minLength = Math.min(array1.length, array2.length);
-
         for (int i = 0; i < minLength; i++) {
             if (array1[i] == 0 && array2[i] == 0) {
                 return true;
@@ -269,7 +268,6 @@ public class ZeroSteps3 {
 
     public int insideCircle(int[] x, int[] y, int radius) {
         int count = 0;
-
         for (int i = 0; i < x.length; i++) {
             if (x[i] * x[i] + y[i] * y[i] <= radius * radius) {
                 count++;
@@ -281,11 +279,9 @@ public class ZeroSteps3 {
 
     public double scalarProduct(double[] array1, double[] array2) {
         double sum = 0.0;
-
         for (int i = 0; i < array1.length; i++) {
             sum += array1[i] * array2[i];
         }
-
         return sum;
     }
 }

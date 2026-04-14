@@ -3,8 +3,10 @@ package academy.tochkavhoda.introduction;
 import java.util.Random;
 
 public class ZeroSteps2 {
+
     public int sumSquares(int count) {
         int sum = 0;
+
         for (int i = 1; i <= count; i++) {
             sum += i * i;
         }

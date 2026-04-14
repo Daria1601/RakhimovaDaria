@@ -5,7 +5,12 @@ import java.math.BigInteger;
 import java.math.RoundingMode;
 
 public class NumberOperations {
+
     public static Integer find(int[] array, int value) {
+        if (array == null) {
+            return null;
+        }
+
         for (int i = 0; i < array.length; i++) {
             if (array[i] == value) {
                 return i;
@@ -16,6 +21,10 @@ public class NumberOperations {
     }
 
     public static Integer find(double[] array, double value, double eps) {
+        if (array == null) {
+            return null;
+        }
+
         for (int i = 0; i < array.length; i++) {
             if (Math.abs(array[i] - value) <= eps) {
                 return i;
@@ -26,6 +35,10 @@ public class NumberOperations {
     }
 
     public static Double calculateDensity(double weight, double volume, double min, double max) {
+        if (volume == 0) {
+            return null;
+        }
+
         double density = weight / volume;
 
         if (density >= min && density <= max) {
@@ -36,8 +49,12 @@ public class NumberOperations {
     }
 
     public static Integer find(BigInteger[] array, BigInteger value) {
+        if (array == null || value == null) {
+            return null;
+        }
+
         for (int i = 0; i < array.length; i++) {
-            if (array[i] != null && array[i].equals(value)) {
+            if (array[i].equals(value)) {
                 return i;
             }
         }
@@ -46,15 +63,15 @@ public class NumberOperations {
     }
 
     public static BigDecimal calculateDensity(BigDecimal weight, BigDecimal volume, BigDecimal min, BigDecimal max) {
-        int maxScale = Math.max(Math.max(weight.scale(), volume.scale()),
-                Math.max(min.scale(), max.scale()));
-        BigDecimal density = weight.divide(volume, maxScale + 1, RoundingMode.HALF_UP);
-
-        if (density.compareTo(min) >= 0 && density.compareTo(max) <= 0) {
-            return density;
-        }
-        else {
+        if (volume == null || volume.compareTo(BigDecimal.ZERO) == 0) {
             return null;
         }
+        BigDecimal density = weight.divide(volume, 50, RoundingMode.HALF_UP);
+
+        if (density.compareTo(min) >= 0 && density.compareTo(max) <= 0) {
+
+            return density.setScale(1, RoundingMode.HALF_UP);
+        }
+        return null;
     }
 }

@@ -1,6 +1,7 @@
 package academy.tochkavhoda.figures.v1;
 
 import academy.tochkavhoda.figures.v1.Point;
+import academy.tochkavhoda.figures.v1.Rectangle;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,6 +1,4 @@
-package academy.tochkavhoda.figures.v1.circle;
-
-import academy.tochkavhoda.figures.v1.Point;
+package academy.tochkavhoda.figures.v1;
 
 import java.util.Objects;
 
@@ -60,7 +58,7 @@ public class Circle {
     }
 
     public void resize(double ratio) {
-        this.radius *= ratio;
+        this.radius = (int) (this.radius * ratio);
     }
 
     public double getArea() {
@@ -93,4 +91,5 @@ public class Circle {
     public int hashCode() {
         return Objects.hash(center, radius);
     }
+
 }

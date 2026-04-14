@@ -11,8 +11,8 @@ public class ZeroSteps4 {
 
         int min = matrix[0][0];
 
-        for (int[] arr: matrix) {
-            for (int num: arr) {
+        for (int[] arr : matrix) {
+            for (int num : arr) {
                 if (min > num) {
                     min = num;
                 }
@@ -29,8 +29,8 @@ public class ZeroSteps4 {
 
         int max = matrix[0][0];
 
-        for (int[] arr: matrix) {
-            for (int num: arr) {
+        for (int[] arr : matrix) {
+            for (int num : arr) {
                 if (max < num) {
                     max = num;
                 }
@@ -41,8 +41,8 @@ public class ZeroSteps4 {
     }
 
     public boolean find(int[][] matrix, int value) {
-        for (int[] arr: matrix) {
-            for (int num: arr) {
+        for (int[] arr : matrix) {
+            for (int num : arr) {
                 if (num == value) {
                     return true;
                 }
