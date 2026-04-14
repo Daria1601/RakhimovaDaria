@@ -41,7 +41,7 @@ public class ZeroSteps1 {
         double powSide1 = Math.pow(side1, 2);
         double powSide2 = Math.pow(side2, 2);
 
-        return Math.sqrt((powSide1 - powSide2)) + side1 + side2;
+        return Math.sqrt(powSide1 + powSide2) + side1 + side2;
     }
 
     public int reverseNumber(int number) {
