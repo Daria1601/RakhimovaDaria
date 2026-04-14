@@ -1,0 +1,14 @@
+package academy.tochkavhoda.school;
+
+public enum TrainingErrorCode {
+    GROUP_WRONG_NAME,
+    GROUP_WRONG_ROOM,
+    SCHOOL_WRONG_NAME,
+    TRAINEE_NOT_FOUND,
+    GROUP_NOT_FOUND,
+    DUPLICATE_GROUP_NAME,
+    DUPLICATE_TRAINEE,
+    EMPTY_TRAINEE_QUEUE,
+    DUPLICATE_PASSPORT,
+    PASSPORT_NOT_FOUND
+}
